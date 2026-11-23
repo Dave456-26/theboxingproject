@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+
+    background-color: #02040b;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1.5px),
+        radial-gradient(#8bbcff 1px, transparent 1.5px),
+        radial-gradient(circle at center,
+        #17233b 0%, #080d19 55%, #02040b 100%);
+
+    background-size:
+        90px 90px,
+        130px 130px,
+        100% 100%;
+
+    background-repeat:
+        repeat,
+        repeat,
+        no-repeat;
+
+    background-position:
+        0 0,
+        40px 60px,
+        center;
+
+    animation: starDrift 30s linear infinite;
+}
+
+@keyframes starDrift {
+    from {
+        background-position:
+            0 0,
+            40px 60px,
+            center;
+    }
+
+    to {
+        background-position:
+            0 -90px,
+            40px -30px,
+            center;
+    }
+}
+
+header{
+    position: relative;
+    z-index: 1;
+    padding: 60px 20px 30px;
+    animation: appear 2s ease forwards;
+
+}
+
+
+header h1{
+    font-size: 42px;
+    letter-spacing: 8px;
+    color: white;
+    text-shadow: 0 0 15px #168cff;
+}
+
+header p{
+    margin-top: 15px;
+    color: #a8c9f5;
+    letter-spacing: 3px;
+}
+
+main{
+    position: relative;
+    z-index: 1;
+    padding: 30px 20px 70px;
+}
+
+main h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #c3c0d5;
+
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: radial-gradient(
+        circle at center,
+        #17233b,
+        #080d19,
+        #000000
+    );
+}
+
+
+
+.boxer-image{
+    width: 600px;
+    margin: 0 auto 45px;
+    
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+
+    animation: boxerReveal 3s ease-out 1s forwards;
+}
+
+.boxer-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    border-radius: 12px;
+    border: 2px solid rgba(100, 170, 255, 0.6);
+
+    box-shadow:
+        0 0 20px rgba(40, 130, 255, 0.5),
+        0 0 60px rgba(40, 130, 255, 0.25);
+}
+
+@keyframes boxerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+        letter-spacing: 4px;
+    }
+
+    main h2 {
+        font-size: 50px;
+    }
+
+    main p {
+        font-size: 19px;
+        margin-bottom: 70px;
+    }
+
+    .boxer-image {
+        width: 95%;
+    }
+}
+
+main p{
+    margin-bottom: 50px;
+    font-size: 21px;
+}
+
